@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SiMiSol - Pedidos</title>
+    <link rel="icon" type="image/png" href="./c/img/ico.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./c/styles.css">
+
+    <!-- font Awasome-->
+    <script src="https://kit.fontawesome.com/fb56d1a6d2.js" crossorigin="anonymous"></script>
+<style>
+    @media print {
+    * {
+        font-size: 20px;
+    }
+    }  
+</style>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Contenido Principal -->
+        <div class="container">
+            <div class="img">
+                <div class=""></div>
+                <div class=""><img src="../css/img/logo.png" alt="" srcset=""></div>
+                <div class=""></div>
+                
+            </div>
+            <div class="card" style="margin: 10px 20px; padding-bottom: 20px;">
+                <div class="precioCarrito" id="precioCarrito"></div>
+            </div>
+            <form id="form-notes"></form>
+            <div class="col-md-12">
+                <div class="tabla" id="notas-muro" style="grid-template-columns: 4fr 2fr 2fr;">
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<footer>
+    <div class="derechos">
+        © Imprenta Si Mi Sol - 2021       <br>
+      
+    </div>
+    <div class="creditos">Desarrollado por Jorge Emiliano Maldonado.</div>    
+</footer>
+
+<script>
+    function obtenerNota() {
+        let notas = JSON.parse(localStorage.getItem('notas'));              // Convertir en Objeto un String
+        let mostrarNota = document.getElementById('notas-muro');
+        let mostrarPrecio = document.getElementById('precioCarrito');
+    
+        mostrarNota.innerHTML = `<div class="apunte">Apunte</div>
+        <div class="paginas">Pags</div>
+        <div class="precio">Precio</div>`;
+    
+        var precioTotal = 0;
+    
+        for (let i = 0; i < notas.length; i++) {
+            let nombreApunte = notas[i].nombreApunte;
+            let paginas = notas[i].paginas;
+            let color = notas[i].color;
+            let faz = notas[i].faz;
+            let precio =  notas[i].precio;
+            mostrarNota.innerHTML += ` 
+                <div class="apunte">${nombreApunte}</div>
+                <div class="paginas">${paginas}</div>
+                <div class="precio">$${precio.toFixed(2)}</div>
+            `;
+            precioTotal += precio;
+        }
+        mostrarPrecio.innerHTML = `<i class="fas fa-shopping-cart"></i>$ ${precioTotal.toFixed(2)}`;
+    };
+    
+    obtenerNota();
+    </script>
+    
+</body>
+</html>

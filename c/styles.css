@@ -1,0 +1,179 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(248, 248, 248, 0.329);
+    margin: 0;
+    background-color: #fbfbfb;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9e2f6' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+}
+a {
+    text-decoration: none;
+}
+
+/*====================================
+  Contenedor principal
+*/
+.contenedor{
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+.seleccionFormato{
+    width: 150px;
+    height: 150px;
+}
+.container .img {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    
+}
+.container .img img {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    border-radius: 50%;
+    border: #b4bbf7 solid 3px;
+}
+/*====================================
+  Estilos de fotmulario
+*/
+.opc {
+    display: grid;
+    grid-template-columns: 30px auto 30px auto;
+    margin: 5px 10%;
+}
+.opc .cajas {
+    text-align: left;
+    padding: 5px;
+    font-size: 12px;
+}
+.tabla{
+    background: #fff;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 1fr;
+    padding: 10px;
+    font-size: 11px;
+    border: rgb(214, 214, 214) solid 1px;
+    border-radius: 5px;
+}
+.tabla .apunte, .paginas, .precio, .borrar {
+    padding: 10px 0;
+    border-bottom: rgb(196, 196, 196) solid 1px;
+} 
+.precioCarrito {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: rgb(86, 160, 107);
+}
+.borrado i{
+    color: rgb(228, 192, 192);
+    font-size: 15px;
+    background: rgb(174, 79, 79);
+    padding: 4px;
+    border-radius: 4px;
+}
+.boton{
+    padding: 10px;
+    width: 90%;
+    height: auto;
+    border: 1px dashed rgb(6, 8, 31);
+    background-color: rgb(143, 173, 228);
+}
+.volverInicio {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.volverInicio a {
+    text-decoration: none;
+    color: #96cef3;
+}
+.volverInicio a i {
+    font-size: 45px;
+}
+.irTienda {
+    margin-top: 0;
+}
+.irTienda i {
+    background: #b4bbf7;
+    border: #fff solid 4px;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+}
+.irTienda a i {
+    font-size: 20px;
+}
+/*====================================
+    TIENDA
+*/
+.tienda {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+/*====================================
+  Acciones
+*/
+.acciones {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffffff;
+    margin-top: 10px;
+    padding: 10px;
+    border: rgb(221, 221, 221) solid 1px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #444444;
+}
+.acciones a {
+    text-decoration: none;
+}
+.visitaTienda {
+    background: #b4bbf7;
+    padding: 5px 20px;
+}
+.visitaTienda h1 {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
+/*====================================
+  Footer
+*/
+footer {
+    margin-top: 20px;
+    bottom: 0;
+    padding: 10px 5px;
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    color: rgb(145, 145, 145);
+}
+footer .derechos {
+    font-size: 13px;
+}
+footer .derechos a {
+    text-decoration: none;
+    color: rgb(125, 185, 235);
+}
+footer .creditos {
+    font-size: 13px;
+    color: rgb(173, 173, 173);
+}
+/*====================================
+  Estilos celulares
+  */
+  @media (max-width: 800px) {
+    /*====================================
+        TIENDA
+    */
+    .tienda {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
