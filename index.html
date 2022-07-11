@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imprenta SiMiSol</title>
+    <link rel="stylesheet" href="./c/styles.css?v=2">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../Tienda/css/img/ico.ico" sizes="16x16 32x32">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- font Awasome-->
+    <script src="https://kit.fontawesome.com/fb56d1a6d2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    </div>
+    <div class="contenedor">
+        <!-- Contenido Principal -->
+        <div class="container mt-5">
+            <div class="row pt-2">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="precioCarrito" id="precioCarrito"></div>
+                        <div class="card-body">
+                            <form id="form-notes">
+                                <div class="form-group">
+                                <input type="number" id="paginas" placeholder="Cantidad de paginas del apunte" class="form-control"autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="nombreApunte" placeholder="Nombre del apunte (opcional)" class="form-control" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <div class="opc">
+                                    <div class="cajas"><input type="radio" name="faz" id="faz" value="doble" checked></div>
+                                    <div class="cajas">Doble faz</div>
+                                    <div class="cajas"><input type="radio" name="faz" id="faz" value="simple" ></div>
+                                    <div class="cajas">Simple faz</div>
+                                    <div class="cajas"><input type="radio" name="color" id="color" value="bn" checked></div>
+                                    <div class="cajas">bn</div>
+                                    <div class="cajas"><input type="radio" name="color" id="color" value="color" ></div>
+                                    <div class="cajas">color</div>
+                                    <div class="cajas"><input type="radio" name="anillado" id="anillado" value="sinAnillado" checked></div>
+                                    <div class="cajas">Sin Anillar</div>
+                                    <div class="cajas"><input type="radio" name="anillado" id="anillado" value="anillado" ></div>
+                                    <div class="cajas">Anillado</div>
+                                    <div class="cajas"><input type="radio" name="dosxCarilla" id="dosxCarilla" value="2" ></div>
+                                    <div class="cajas">2 Pags x Carilla</div>
+                                    <div class="cajas"><input type="radio" name="dosxCarilla" id="dosxCarilla" value="1" checked></div>
+                                    <div class="cajas">Normal</div>
+                                </div>
+                                <!-- <input type="text" id="fechaEntrega" placeholder="Numero del cliente" class="form-control"autocomplete="off"> -->
+                            </div>
+                            <button class="btn btn-primary btn-block boton" type="submit">Calcular</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tabla" id="notas-muro">
+                    <div class="apunte">Nombre apunte</div>
+                    <div class="paginas">Pags</div>
+                    <div class="precio">$</div>
+                    <div class="borrar"></div>
+                </div>
+                <div class="acciones">
+                    <div class="wsp"><a href="https://api.whatsapp.com/send?phone=543424416404&text=Hola%20estuve%20presupuestando%20mis%20apuntes%20y%20me%20gustar%C3%ADa%20imprimirlos" target="_blank"><i class="fab fa-whatsapp"></i> Enviar wsp</a></div>
+                    <div class="imprimir"><a href="presupuesto.html" target="_blank"><i class="fas fa-print"></i> Imprimir presupuesto</a></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<footer>
+    <div class="derechos">
+        © Imprenta Si Mi Sol - 2021       <br>
+        <i class="fab fa-instagram"></i><a target="_blank" href="https://www.instagram.com/si_mi_sol">Instagram</a>    |
+        <i class="fab fa-whatsapp"></i><a target="_blank" href="https://wa.me/5493424416404">Whatsapp</a>     |
+        <i class="fas fa-exclamation-triangle"></i><a target="_blank" href="https://wa.me/5493424416404">Reportar un error</a>
+    </div>
+    <div class="creditos">Desarrollado por Jorge Emiliano Maldonado.</div>    
+</footer>
+
+<!-- Scripts -->
+<script src="./c/script.js?v=6"></script>
+</body>
+</html>

@@ -1,11 +1,10 @@
 document.getElementById('form-notes').addEventListener('submit', guardarNota);
-const bnSF = 3.3;
+const bnSF = 3.5;
 const bnDF = 2.5;
 const CSF = 10;
-const CDF = 5;
+const CDF = 7;
 
 function guardarNota(e) {
-    // Variables donde obtengo los valores del Formulario
     var paginas = document.getElementById('paginas').value;
     var nombreApunte = document.getElementById('nombreApunte').value;
     var faz = document.querySelector('input[name="faz"]:checked').value;
@@ -14,8 +13,7 @@ function guardarNota(e) {
     var cantidadxCarilla = document.querySelector('input[name="dosxCarilla"]:checked').value;
     var precio = calcularPrecio(paginas, faz, color, cantidadxCarilla, anillado);
     var mostrarPrecio = 0;
-    
-    // Si nombre apunte es Vacio
+
     if(nombreApunte == ''){
         nombreApunte = 'Impresion, '+ faz + ', ' + color + ', ' + anillado;
         if(cantidadxCarilla == 2){
@@ -72,17 +70,17 @@ function obtenerNota() {
             <div class="apunte">${nombreApunte}</div>
             <div class="paginas">${paginas}</div>
             <div class="precio">$${precio.toFixed(2)}</div>
-            <div class="borrar"> <a class="borrado" onclick="borrarNota('${nombreApunte}')"><i class="fas fa-trash-alt"></i></a></div>
+            <div class="borrar"> <a class="borrado" onclick="setTimeout(borrarNota('${i}'), 3000)"><i class="fas fa-trash-alt"></i></a></div>
         `;
         precioTotal += precio;
     }
     mostrarPrecio.innerHTML = `<i class="fas fa-shopping-cart">$ ${precioTotal.toFixed(2)} </i>`;
 };
 
-function borrarNota(title) {
+function borrarNota(x) {
     notas = JSON.parse(localStorage.getItem('notas'));
     for (let i = 0; i < notas.length; i++) {
-        if (notas[i].nombreApunte == title) {
+        if (i == x) {
             notas.splice(i, 1);
         }
     }
